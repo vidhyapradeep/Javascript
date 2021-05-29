@@ -29,6 +29,14 @@ const circle1 = {
         console.log('DRAW');
     } 
 }
+
+const circle2 = {
+    radius: 2,
+    draw(){
+        console.log('DRAW');
+    } 
+}
+
 for(let key in circle1)
     console.log(key, circle1[key]);
 
@@ -37,3 +45,14 @@ for(let key of Object.keys(circle1))
 
 for(let entry of Object.entries(circle1))
     console.log('entry', entry)    
+
+//Cloning an object
+// const another = {};
+// for(let key in circle1)
+//     another[key] = circle1[key];  
+
+//const another = Object.assign({}, circle1, circle2);
+
+const another = { ...circle2,...circle1 };
+    
+console.log(another);    
