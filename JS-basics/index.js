@@ -1,1 +1,2 @@
-console.log('VD');
+let name;
+console.log(name);
